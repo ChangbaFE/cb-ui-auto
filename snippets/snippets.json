@@ -1,0 +1,260 @@
+{
+	"cb-page": {
+		"prefix": "cb-page",
+		"body": [
+			"<cb-page-section>${1:其它组件或内容......}</cb-page-section>"
+		],
+		"description": "Page-Section 页面容器"
+	},
+
+	"cb-page-d": {
+		"prefix": "cb-page-d",
+		"body": [
+			"<cb-page-section :description=\"${1:页面子标题}\">${2:其它组件或内容......}</cb-page-section>"
+		],
+		"description": "Page-Section 页面容器+子标题"
+	},
+
+	"btn-primary": {
+		"prefix": "cb-button-p",
+		"body": [
+			"<cb-button theme=\"primary\">${1:主要按钮}</cb-button>"
+		],
+		"description": "Primary Button 主要按钮"
+	},
+
+	"btn-success": {
+		"prefix": "cb-button-s",
+		"body": [
+			"<cb-button theme=\"success\">${1:成功按钮}</cb-button>"
+		],
+		"description": "Success Button 成功按钮"
+	},
+
+	"btn-info": {
+		"prefix": "cb-button-i",
+		"body": [
+			"<cb-button theme=\"info\">${1:信息按钮}</cb-button>"
+		],
+		"description": "Info Button 信息按钮"
+	},
+
+	"btn-warning": {
+		"prefix": "cb-button-w",
+		"body": [
+			"<cb-button theme=\"success\">${1:警告按钮}</cb-button>"
+		],
+		"description": "Warning Button 警告按钮"
+	},
+
+	"btn-danger": {
+		"prefix": "cb-button-d",
+		"body": [
+			"<cb-button theme=\"danger\">${1:危险按钮}</cb-button>"
+		],
+		"description": "Danger Button 危险按钮"
+	},
+
+	"cb-menu-item": {
+		"prefix": "cb-menu-item",
+		"body": [
+			"<cb-menu-item>${1:菜单项}</cb-menu-item>"
+		],
+		"description": "Menu Item 下拉菜单项"
+	},
+
+	"cb-menu": {
+		"prefix": "cb-menu",
+		"body": [
+			"<template slot=\"menu\">",
+			"\t<cb-menu-item>${1:菜单1}</cb-menu-item>",
+			"\t<cb-menu-item>${2:菜单2}</cb-menu-item>",
+			"\t<cb-menu-item>${3:菜单3}</cb-menu-item>",
+			"\t<cb-menu-item separator>${4:菜单4}</cb-menu-item>",
+			"\t<cb-menu-item>${5:菜单1}</cb-menu-item>",
+			"</template>"
+		],
+		"description": "Menu Item 下拉菜单项"
+	},
+
+	"cb-icon": {
+		"prefix": "cb-icon",
+		"body": [
+			"<icon name=\"${1:edit}\"></icon>"
+		],
+		"description": "icon 图标"
+	},
+
+	"cb-icon-f": {
+		"prefix": "cb-icon-f",
+		"body": [
+			"<icon type=\"${1:fa}\" name=\"${2:edit}\"></icon>"
+		],
+		"description": "icon 图标"
+	},
+
+	"cb-icon-g": {
+		"prefix": "cb-icon-g",
+		"body": [
+			"<icon type=\"${1:g}\" name=\"${2:edit}\"></icon>"
+		],
+		"description": "icon 图标"
+	},
+
+	"cb-search": {
+		"prefix": "cb-search",
+		"body": [
+			"<cb-search-table :data=\"${1:list}\" :pager=\"${2:pager}\" @search=\"refresh\" ref=\"search\" v-loading>",
+			"</cb-search-table>"
+		],
+		"description": "Search Table 带搜索条件"
+	},
+
+	"cb-search-table": {
+		"prefix": "cb-search-table",
+		"body": [
+			"<cb-search-table :data=\"${1:list}\" :pager=\"${2:pager}\" @search=\"refresh\" ref=\"search\" v-loading>",
+			"\t<template slot=\"header\">",
+			"\t\t<cb-form-group label=\"名称：\">",
+			"\t\t\t<cb-form-control v-model=\"searchValue\" v-focus></cb-form-control>",
+			"\t\t</cb-form-group>",
+			"\t\t<cb-form-group label=\"状态：\">",
+			"\t\t\t<cb-form-control type=\"select\" v-model=\"status\">",
+			"\t\t\t\t<option value=\"\">全部</option>",
+			"\t\t\t\t<option value=\"1\">有效</option>",
+			"\t\t\t\t<option value=\"0\">无效</option>",
+			"\t\t\t</cb-form-control>",
+			"\t\t</cb-form-group>",
+			"\t</template>",
+			"\n",
+			"\t<template slot=\"header-button\">",
+			"\t\t<cb-button theme=\"success\">新建</cb-button>",
+			"\t\t<cb-button @click=\"testRefresh\">测试刷新</cb-button>",
+			"\t</template>",
+			"\n",
+			"\t<template slot=\"table-header\">",
+			"\t\t<th>index</th>",
+			"\t\t<th>ID</th>",
+			"\t\t<th>名称</th>",
+			"\t\t<th width=\"100\">操作</th>",
+			"\t</template>",
+			"\n",	
+			"\t<template slot=\"table-body\" slot-scope=\"{ item, index }\">",
+			"\t\t<td>{{ index }}</td>",
+			"\t\t<td>{{ item.id }}</td>",
+			"\t\t<td>{{ item.name }}</td>",
+			"\t\t<td>",
+			"\t\t\t<cb-button block small>编辑</cb-button>",
+			"\t\t</td>",
+			"\t</template>",
+		  	"</cb-search-table>"
+		],
+		"description": "Search Table 带搜索条件"
+	},
+
+	"cb-form": {
+		"prefix": "cb-form",
+		"body": [
+			"<cb-form button=\"${1:保存}\" @submit=\"${2:handleSubmit}\">",
+			"</cb-form>"
+		],
+		"description": "Form 表单容器"
+	},
+
+	"cb-form-group": {
+		"prefix": "cb-form-g",
+		"body": [
+			"<cb-form-group label=\"${ID}：\">",
+			"</cb-form-group>"
+		],
+		"description": "Form 表单容器组"
+	},
+
+	"cb-form-control": {
+		"prefix": "cb-control",
+		"body": [
+			"<cb-form-control v-model=\"${1:test}\"></cb-form-control>"
+		],
+		"description": "Form 输入框"
+	},
+
+	"cb-form-select": {
+		"prefix": "cb-select",
+		"body": [
+			"<cb-form-control type=\"select\" v-model=\"${1:form.type}\">",
+			"\t<option value=\"1\">类型一</option>",
+			"\t<option value=\"2\">类型二</option>",
+		  	"</cb-form-control>"
+		],
+		"description": "Form 选择框"
+	},
+
+	"cb-form-date": {
+		"prefix": "cb-datetime",
+		"body": [
+			"<datetime-picker v-model=\"${1: form.date}\" use-time></datetime-picker>"
+		],
+		"description": "Form 日期时间"
+	},
+
+	"cb-form-checkbox": {
+		"prefix": "cb-checkbox",
+		"body": [
+			"<cb-checkbox-group inline v-model=\"${1:form.data1}\">",
+			"\t<cb-checkbox value=\"1\">抽奖</cb-checkbox>",
+			"\t<cb-checkbox value=\"2\">满赠</cb-checkbox>",
+			"\t<cb-checkbox value=\"3\">满减</cb-checkbox>",
+			"\t<cb-checkbox value=\"4\">返利</cb-checkbox>",
+		 	"</cb-checkbox-group>"
+		],
+		"description": "Form 复选框"
+	},
+
+	"cb-form-radio": {
+		"prefix": "cb-radio",
+		"body": [
+			"<cb-radio-group inline v-model=\"${1:form.data1}\">",
+			"\t<cb-radio value=\"1\">线上活动</cb-radio>",
+			"\t<cb-radio value=\"2\">线下活动</cb-radio>",
+			"</cb-radio-group>"
+		],
+		"description": "Form 单选按钮"
+	},
+
+	"cb-form-textarea": {
+		"prefix": "cb-textarea",
+		"body": [
+			"<cb-form-control type=\"textarea\" v-model=\"${1:form.desc}\"></cb-form-control>"
+		],
+		"description": "Form 多行文本"
+	},
+
+	"cb-form-file": {
+		"prefix": "cb-file",
+		"body": [
+			"<cb-form-control type=\"file\" v-model=\"${1:form.file}\">${2:选择图片文件}</cb-form-control>"
+		],
+		"description": "Form 图片文件"
+	},
+
+	"cb-form-color": {
+		"prefix": "cb-color",
+		"body": [
+			"<color-picker v-model=\"${1:form.color}\"></color-picker>"
+		],
+		"description": "Form 颜色选择"
+	},
+
+	"cb-steps": {
+		"prefix": "cb-steps",
+		"body": [
+			"<cb-steps v-model=\"${1:step}\">",
+			"\t<cb-step>${2:第一步}</cb-step>",
+			"\t<cb-step>${2:第二步}</cb-step>",
+			"\t<cb-step>${2:第三步}</cb-step>",
+			"\t<cb-step>${2:完成}</cb-step>",
+		  	"</cb-steps>"
+		],
+		"description": "Steps 步骤条"
+	}
+}
