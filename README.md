@@ -12,7 +12,7 @@ VSCode插件，唱吧管理后台 UI 自动补全
 
 ### 官方扩展商店安装：
 
-可以在vscode的扩展面板搜索 uxcool，点击安装cb-ui-auto
+可以在vscode的扩展面板搜索 cb-ui-auto，点击安装cb-ui-auto
 
 如果提示无法安装，可以按照提示，下载VSIX安装包，在扩展面板，选择 **更多》从VSIX安装**
 
